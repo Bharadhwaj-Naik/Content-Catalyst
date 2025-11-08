@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Catalyst  - Dynamic Content Repurposing</title>
     <link rel="stylesheet" href="styles.css" >
+     
 </head>
 <body>
     <div class="container">
@@ -12,10 +13,13 @@
             <h1>🚀  Content Catalyst  </h1>
             <p>Transform your content into multiple formats instantly with AI-powered repurposing</p>
         </header>
+
         <main>
             <div id="alertContainer"></div>
+
             <div class="card">
                 <h2>📝 Enter Your Content</h2>
+                
                 <form id="contentForm">
                     <div class="form-group">
                         <label for="contentText">Paste your text here:</label>
@@ -25,6 +29,7 @@
                             required
                             minlength="50"></textarea>
                     </div>
+
                     <div class="form-group">
                         <label for="outputFormat">Convert To:</label>
                         <select id="outputFormat" required>
@@ -34,6 +39,7 @@
                             <option value="presentation">📊 Presentation Outline</option>
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label for="customInstruction">Custom Instructions (Optional):</label>
                         <input 
@@ -48,6 +54,7 @@
                     </button>
                 </form>
             </div>
+
             <div class="loading" id="loadingIndicator">
                 <div class="spinner"></div>
                 <p>🤖 AI is processing your content...</p>
@@ -61,6 +68,7 @@
                     <button class="btn btn-accent" id="newConversionBtn">🔄 New Conversion</button>
                 </div>
             </div>
+
             <div class="features">
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
@@ -84,10 +92,13 @@
                 </div>
             </div>
         </main>
+
         <footer>
             <p>© Content Catalyst - Dynamic Content Repurposing | Mentor ➡️ Prof. G Venkat Ram Reddy, SME IIT Jodhpur</p>
         </footer>
     </div>
+
     <script src="script.js"> </script>
+       
 </body>
 </html>

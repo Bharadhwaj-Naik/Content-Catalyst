@@ -157,7 +157,9 @@
             
             if (instruction) {
                 guide += `---\n📌 Custom Focus: ${instruction}`;
-            }  return guide;
+            }
+            
+            return guide;
         }
 
         // Blog Post Generator
@@ -203,8 +205,11 @@
             
             if (instruction) {
                 blog += `---\n*Note: ${instruction}*\n`;
-            } return blog;
+            }
+            
+            return blog;
         }
+
         // Presentation Outline Generator
         function generatePresentationOutline(content, instruction) {
             const title = extractTitle(content);
@@ -355,8 +360,10 @@
                 presentation += `${instruction}\n`;
                 presentation += `══════════════════════════════════════════════════\n`;
             }
+            
             return presentation;
         }
+
         // Helper function for visual suggestions
         function getVisualSuggestion(index) {
             const suggestions = [
@@ -458,6 +465,7 @@
             elements.outputContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             showAlert('Content successfully generated!', 'success');
         }
+
         function showAlert(message, type = 'success') {
             const alertDiv = document.createElement('div');
             alertDiv.className = `alert alert-${type}`;
@@ -471,6 +479,7 @@
                 alertDiv.style.display = 'none';
             }, 4000);
         }
+
         function hideAlert() {
             elements.alertContainer.innerHTML = '';
         }
@@ -496,12 +505,14 @@
                     showAlert('Failed to copy content. Please try again.', 'error');
                 });
         }
+
         function resetForm() {
             elements.form.reset();
             elements.outputContainer.style.display = 'none';
             hideAlert();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
         // Initialize - Add stagger animation to feature cards
         document.addEventListener('DOMContentLoaded', () => {
             const featureCards = document.querySelectorAll('.feature-card');
@@ -509,3 +520,4 @@
                 card.style.animationDelay = `${index * 0.1}s`;
             });
         });
+   
