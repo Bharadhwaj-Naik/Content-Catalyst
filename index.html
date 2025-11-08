@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Catalyst  - Dynamic Content Repurposing</title>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀  Content Catalyst  </h1>
+            <p>Transform your content into multiple formats instantly with AI-powered repurposing</p>
+        </header>
+        <main>
+            <div id="alertContainer"></div>
+            <div class="card">
+                <h2>📝 Enter Your Content</h2>
+                <form id="contentForm">
+                    <div class="form-group">
+                        <label for="contentText">Paste your text here:</label>
+                        <textarea 
+                            id="contentText" 
+                            placeholder="Enter your article, blog post, research paper, or any text content..." 
+                            required
+                            minlength="50"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="outputFormat">Convert To:</label>
+                        <select id="outputFormat" required>
+                            <option value="podcast-script">🎙️ Podcast Script</option>
+                            <option value="study-guide">📚 Study Guide</option>
+                            <option value="blog-post">✍️ Blog Post</option>
+                            <option value="presentation">📊 Presentation Outline</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="customInstruction">Custom Instructions (Optional):</label>
+                        <input 
+                            type="text" 
+                            id="customInstruction" 
+                            placeholder="e.g., Make it engaging, focus on key points, use simple language..."
+                            maxlength="200">
+                    </div>
 
+                    <button type="submit" class="btn btn-block" id="submitBtn">
+                        ✨ Repurpose Content
+                    </button>
+                </form>
+            </div>
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>🤖 AI is processing your content...</p>
+            </div>
+
+            <div class="card output-container" id="outputContainer">
+                <h2>✅ Your Repurposed Content</h2>
+                <div class="output-content" id="outputContent"></div>
+                <div class="output-actions">
+                    <button class="btn" id="copyBtn">📋 Copy to Clipboard</button>
+                    <button class="btn btn-accent" id="newConversionBtn">🔄 New Conversion</button>
+                </div>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Podcast Scripts</h3>
+                    <p>Transform any content into engaging podcast scripts with natural host dialogues and structured flow.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Study Guides</h3>
+                    <p>Create comprehensive study guides from complex materials with key points and summaries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✍️</div>
+                    <h3>Blog Posts</h3>
+                    <p>Convert technical content into reader-friendly blog posts with proper structure and SEO.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Presentations</h3>
+                    <p>Generate presentation outlines with clear sections, talking points, and visual suggestions.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© Content Catalyst - Dynamic Content Repurposing | Mentor ➡️ Prof. G Venkat Ram Reddy, SME IIT Jodhpur</p>
+        </footer>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>
